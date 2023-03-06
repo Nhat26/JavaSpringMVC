@@ -1,0 +1,96 @@
+package SpringMVC.Controller;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.bson.Document;
+import org.springframework.stereotype.Controller;
+
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.ModelAndView;
+
+import com.mongodb.MongoClient;
+import com.mongodb.client.FindIterable;
+import com.mongodb.client.MongoCollection;
+import com.mongodb.client.MongoDatabase;
+
+import SpringMVC.Model.UserModel;
+import org.springframework.web.bind.annotation.RequestMethod;
+
+@Controller
+public class HomeController{
+	@RequestMapping("/trang-chu")
+
+	public ModelAndView listPersons() {
+		
+		
+      MongoClient mongoClient = new MongoClient("localhost", 27017);
+      MongoDatabase db = mongoClient.getDatabase("admin");
+
+   
+      MongoCollection<Document> collection = db.getCollection("usser");
+
+     
+      FindIterable<Document> iterDoc = collection.find();
+
+      
+	    List<UserModel> persons = new ArrayList<UserModel>();
+      for (Document doc : iterDoc) {
+          String name = doc.getString("name");
+          String sdt = doc.getString("sdt");
+          System.out.println("name: " +name);
+          System.out.println("name: " +sdt);
+          persons.add(new UserModel(name, sdt));
+      }
+      System.out.println("check lisst" );
+      for(UserModel o : persons){
+    	  System.out.println("name1 : " +o.getName());
+    	  System.out.println("name1 : " +o.getSdt());
+      }
+	
+
+	    
+	    ModelAndView modelAndView = new ModelAndView();
+	    modelAndView.setViewName("home");
+
+	   
+	    modelAndView.addObject("persons", persons);
+
+	    
+	    return modelAndView;
+	}
+	
+
+
+	
+	@RequestMapping(value = "/submitForm", method = RequestMethod.POST)
+	public ModelAndView addUser(@RequestParam String name, @RequestParam String sdt) {
+			
+	  
+	    MongoClient mongoClient = new MongoClient("localhost", 27017);
+	    MongoDatabase db = mongoClient.getDatabase("admin");
+
+	   
+	    MongoCollection<Document> collection = db.getCollection("usser");
+
+	   
+	    Document doc = new Document("name", name)
+	                        .append("sdt", sdt);
+	    collection.insertOne(doc);
+	    
+	    
+	    mongoClient.close();
+	    
+	   
+	    ModelAndView modelAndView = new ModelAndView();
+	    modelAndView.setViewName("loginform");
+
+	    
+	    modelAndView.addObject("message", "User added successfully!");
+
+	    
+	    return modelAndView;
+	}
+
+}
