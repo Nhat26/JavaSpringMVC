@@ -10,7 +10,11 @@ public class HomeController{
 	@RequestMapping("/")
 	public String Index()
 	{
-		return "client/index";
+		return "client/dangnhap";
 	}
 
+	@RequestMapping("/dang-ky")
+	public String Dangky() {
+		return "client/dangky";
+	}
 }

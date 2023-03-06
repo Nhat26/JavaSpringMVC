@@ -30,7 +30,7 @@
                   <a style="position: absolute; margin-left: 180px; margin-top: -20px; color: black;  font-size: 14px;" href="#" ><b>Quên mật khẩu?</b></a>
                   <button type="submit" style=" position: relative;;top: 10px; width:100%; height: fit-content;">Đăng nhập</button>
                   <div style="display: flex; justify-content: center; margin-top: 18px; ">
-                    bạn chưa có tài khoản? <a href="#" style="color: black;"><b> Đăng ký</b></a>
+                    Bạn chưa có tài khoản? <a href="/MVC/dangky" style="color: black;"><b> Đăng ký</b></a>
                   </div>
                 </form>
               </div>

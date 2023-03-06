@@ -1,7 +1,7 @@
 <decorators defaultdir="/WEB-INF/views/layout">
-	<decorator name="client" page="client.jsp">
+	<!-- <decorator name="client" page="client.jsp">
 		<pattern>/*</pattern>
-	</decorator>
+	</decorator> -->
 	<decorator name="admin" page="admin.jsp">
 		<pattern>
 			
