@@ -1,0 +1,6 @@
+127.0.0.1 - - [08/Mar/2023:12:31:00 +0700] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [08/Mar/2023:12:31:00 +0700] "GET /MVC/WEB-INF/classes/DB/connect/DatabaseConfig.java HTTP/1.1" 404 604
+0:0:0:0:0:0:0:1 - - [08/Mar/2023:12:38:09 +0700] "GET /MVC/WEB-INF/classes/DB/connect/DatabaseConfig.java HTTP/1.1" 404 604
+0:0:0:0:0:0:0:1 - - [08/Mar/2023:12:42:11 +0700] "GET /MVC/WEB-INF/classes/DB/connect/DatabaseConfig.java HTTP/1.1" 404 604
+0:0:0:0:0:0:0:1 - - [08/Mar/2023:12:42:12 +0700] "GET /favicon.ico HTTP/1.1" 404 684
+0:0:0:0:0:0:0:1 - - [08/Mar/2023:12:46:30 +0700] "GET /MVC/WEB-INF/classes/DB/connect/DatabaseConfig.java HTTP/1.1" 404 604
