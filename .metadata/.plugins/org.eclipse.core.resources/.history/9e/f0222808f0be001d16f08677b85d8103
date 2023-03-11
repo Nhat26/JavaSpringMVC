@@ -1,0 +1,29 @@
+package DB.connect;
+
+import com.mysql.jdbc.Connection;
+
+public class DatabaseConfig {
+	
+	
+//	 public static void main(String[] args) {
+//	        String jdbcUrl = "jdbc:mysql://localhost/db_qlbh";
+//	        String username = "root";
+//	        String password = "";
+//	        
+//	        try {
+//	            System.out.println("Connecting to database: " + jdbcUrl);
+//	            Connection connection = DriverManager.getConnection(jdbcUrl, username, password);
+//	            System.out.println("Connection successful!");
+//	            connection.close();
+//		        } catch (SQLException e) {
+//		            System.out.println("Connection failed. Error message: " + e.getMessage());
+//		        }
+//	    }
+	 
+	 public Connection getConnection()throws Exception{
+		 String jdbcUrl = "jdbc:mysql://localhost/db_qlbh";
+	        String username = "root";
+	        String password = "";
+	        return DriverManager.getConnection(jdbcUrl, username, password);
+	 }
+}

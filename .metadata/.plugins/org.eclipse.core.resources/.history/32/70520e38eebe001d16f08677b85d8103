@@ -1,0 +1,18 @@
+package DAO;
+
+import java.sql.DriverManager;
+
+import com.mysql.jdbc.Connection;
+
+public class LoginDAO {
+	public String Validate(String ename, String pass) {
+		 Connection con = null;
+		 try {
+			 Class.forName("com.mysql.jdbc.Driver");
+			 con= DriverManager.getConnection("jdbc");
+		} catch (Exception e) {
+			System.out.println(e);
+		}
+		return "";	
+	}
+}

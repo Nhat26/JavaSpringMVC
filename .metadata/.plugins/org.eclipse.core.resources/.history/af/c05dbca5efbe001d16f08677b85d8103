@@ -1,0 +1,18 @@
+package DAO;
+
+
+import com.mysql.jdbc.Connection;
+
+import DB.connect.DatabaseConfig;
+
+public class LoginDAO {
+	public String Validate(String ename, String pass) {
+		 
+		 try {
+			 Connection con = new DatabaseConfig().getConnection();
+		 } catch (Exception e) {
+			System.out.println(e);
+		}
+		return "";	
+	}
+}

@@ -1,0 +1,8 @@
+package DAO;
+
+public class LoginDAO {
+	public String Validate(String ename, String pass) {
+		 
+		return "";	
+	}
+}
