@@ -25,8 +25,8 @@
               <div class="form-content">
                 <h1>Đăng nhập</h1>
                 <form>
-                  <input type="email" placeholder="Email">
-                  <input type="password" placeholder="Password">
+                  <input type="email" name="e" placeholder="Email">
+                  <input type="password" name="p" placeholder="Password">
                   <a style="position: absolute; margin-left: 180px; margin-top: -20px; color: black;  font-size: 14px;" href="#" ><b>Quên mật khẩu?</b></a>
                   <button type="submit" style=" position: relative;;top: 10px; width:100%; height: fit-content;">Đăng nhập</button>
                   <div style="display: flex; justify-content: center; margin-top: 18px; ">
